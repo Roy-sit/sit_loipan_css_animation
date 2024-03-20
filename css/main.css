@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeInLogo 2s ease-in-out 7s forwards;
+}
+
+.message_1,
+.message_1b,
+.message_2,
+.message_3 {
+  position: absolute;
+  opacity: 0; 
+}
+
+.message_1 {
+  font-size: 30px;
+  color: rgb(240, 86, 220);
+  top: 20%;
+  left: 20%;
+  animation: slideInLeft 2s ease-in-out forwards,
+    fakeOutLeft 1s ease-in-out 3.5s forwards;
+}
+
+.message_1b {
+  font-size: 30px;
+  color: rgb(240, 86, 220);
+  top: 20%;
+  right: 16%;
+  animation: slideInRight 2s ease-in-out forwards,
+    fakeOutRight 1s ease-in-out 3.5s forwards;
+}
+
+.message_2 {
+  font-size: 40px;
+  color: rgb(38, 99, 252);
+  -webkit-text-stroke: 3px rgb(248, 238, 126);
+  bottom: 53%;
+  left: 21%;
+  transform: translateX(-50%);
+  animation: slideInBottom 2s ease-in-out 2s forwards,
+    fakeOutBottom 1s ease-in-out 4.5s forwards;
+}
+
+.message_3 {
+  font-size: 50px;
+  color: rgb(246, 82, 32);
+  -webkit-text-stroke: 2.5px rgb(252, 249, 232);
+  top: 20%;
+  left: 23%;
+  transform: translateX(50%);
+  animation: slideInTop 2s ease-in-out 4.5s forwards,
+  fakeOutTop 1s ease-in-out 7s forwards; 
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fakeOutRight {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fakeOutLeft {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fakeOutBottom {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fakeOutTop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
